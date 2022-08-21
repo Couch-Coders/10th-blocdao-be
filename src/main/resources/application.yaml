@@ -3,7 +3,13 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://ec2-3-223-242-224.compute-1.amazonaws.com:5432/delhvg6g9k6loq
     username: bsxpakevnxwggp
-    password: 474cf957475dc371a5d42c6036bf72869a6bc797acf36505245bf08f225d8816
-jasypt:
-  encryptor:
-    bean: jasyptStringEncryptor
+    password: ENC(lCdeI8EiVT+lY+UZMNnb5oMuoU0drRTcmqQ+0aqc0Pry94XhviOvp8Hj6YDx6ur9LOKSLrrUkMbL06hCYNU8LrnpOb0cMZvgV6RKQ7UJ0Dk=)
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    database: postgresql
+  config:
+    import:
+      - classpath:/jasypt.yaml
