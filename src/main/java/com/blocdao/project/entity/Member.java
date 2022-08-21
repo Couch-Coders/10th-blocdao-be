@@ -33,6 +33,6 @@ public class Member {
     private String data_withdrawal;
 
     @Column(nullable = false)
-    private LocalDateTime create_time;
+    private LocalDateTime create_time = LocalDateTime.now();
 
 }

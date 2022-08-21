@@ -1,10 +1,9 @@
 spring:
-  jpa:
-  database-platform: org.hibernate.dialect.PostgreSQL10DialectDialect
-
-    url: jdbc:postgresql://{ec2-3-223-242-224.compute-1.amazonaws.com}:{5432}/{delhvg6g9k6loq}
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-3-223-242-224.compute-1.amazonaws.com:5432/delhvg6g9k6loq
     username: bsxpakevnxwggp
-    password: ENC(2XBSo9F89hry7VGBpQce4XXuyGhr7Y6e7/2jnl1FtZUbaqSR9waX1J94QVCJf1aXfh9lqKISUQPvvTbGCKf5P21l4JTZyoUZ7gxnWBil2C4=)
+    password: 474cf957475dc371a5d42c6036bf72869a6bc797acf36505245bf08f225d8816
 jasypt:
   encryptor:
     bean: jasyptStringEncryptor
