@@ -15,7 +15,7 @@ public class JasyptConfigTest extends BlocdaoApplicationTests {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
 
-        String plainText = "test";
+        String plainText = "";
         config.setPassword("");
         config.setPoolSize("1");
         config.setAlgorithm("PBEWithMD5AndDES");
