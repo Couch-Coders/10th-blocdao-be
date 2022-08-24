@@ -15,7 +15,7 @@ public class JasyptProdConfig {
     @Value("${jasypt}")
     private String encryptKey;
 
-    private String cicdTest3;
+    private String cicdTest4;
 
     @Bean("jasyptStringEncryptor")
     public StringEncryptor stringEncryptor() {
