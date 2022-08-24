@@ -15,6 +15,8 @@ public class JasyptProdConfig {
     @Value("${jasypt}")
     private String encryptKey;
 
+    private String cicdTest;
+
     @Bean("jasyptStringEncryptor")
     public StringEncryptor stringEncryptor() {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
