@@ -1,14 +1,38 @@
 spring:
-  h2:
-    console:
-      enabled: true
-      path: /h2
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:test
-    username: test
-    password: ENC(4qkJeM/cwv1nsXHR4qEDQu5dRpkxx8t/)
+  profiles:
+    group:
+      local: localdb, common
+      prod: proddb, common
+    active: local
+---
 
-jasypt:
-  encryptor:
-    bean: jasyptStringEncryptor
+spring:
+  config:
+    activate:
+      on-profile: localdb
+    import:
+      - classpath:/jasypt.yaml
+---
+spring:
+  config:
+    activate:
+      on-profile: proddb
+  jasypt:
+    encryptor:
+      bean: jasyptStringEncryptor
+---
+spring:
+  config:
+    activate:
+      on-profile: common
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-44-205-64-253.compute-1.amazonaws.com:5432/df27kj78eckbbi
+    username: ccqsjzfamhdgcw
+    password: ENC(pMJSSZjV6sXuiCTCbEIUFvUJv+Jp50YSzy8ycoRZ+xREYwlGj2vF3e/TYnX0lO8N01OR8/nruDNeFlF4P2z+FS6kMumoqep4J0Tf+Pd4iZ0=)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    database: postgresql
