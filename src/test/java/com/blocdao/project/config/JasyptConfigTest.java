@@ -15,8 +15,8 @@ public class JasyptConfigTest extends BlocdaoApplicationTests {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
 
-        String plainText = "";
-        config.setPassword("");
+        String plainText = "8260a9e63e07b4f965db208d88cf963122f174f382b70ac23b291d06ece6fc47";
+        config.setPassword("blocbe!");
         config.setPoolSize("1");
         config.setAlgorithm("PBEWithMD5AndDES");
         config.setStringOutputType("base64");
