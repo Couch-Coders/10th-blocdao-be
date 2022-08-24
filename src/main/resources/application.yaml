@@ -1,42 +1,38 @@
 spring:
+  profiles:
+    group:
+      local: localdb, common
+      prod: proddb, common
+    active: local
+---
+
+spring:
   config:
     activate:
-      on-profile: local
+      on-profile: localdb
     import:
       - classpath:/jasypt.yaml
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-3-223-242-224.compute-1.amazonaws.com:5432/delhvg6g9k6loq
-    username: bsxpakevnxwggp
-    password: ENC(lCdeI8EiVT+lY+UZMNnb5oMuoU0drRTcmqQ+0aqc0Pry94XhviOvp8Hj6YDx6ur9LOKSLrrUkMbL06hCYNU8LrnpOb0cMZvgV6RKQ7UJ0Dk=)
-  jpa:
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
-    database: postgresql
 ---
 spring:
   config:
     activate:
-      on-profile: prod
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-3-223-242-224.compute-1.amazonaws.com:5432/delhvg6g9k6loq
-    username: bsxpakevnxwggp
-    password: ENC(lCdeI8EiVT+lY+UZMNnb5oMuoU0drRTcmqQ+0aqc0Pry94XhviOvp8Hj6YDx6ur9LOKSLrrUkMbL06hCYNU8LrnpOb0cMZvgV6RKQ7UJ0Dk=)
-  jpa:
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
-    database: postgresql
+      on-profile: proddb
   jasypt:
     encryptor:
       bean: jasyptStringEncryptor
 ---
 spring:
-  profiles:
-    group:
-      local: local
-      prod: prod
+  config:
+    activate:
+      on-profile: common
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-44-205-64-253.compute-1.amazonaws.com:5432/df27kj78eckbbi
+    username: ccqsjzfamhdgcw
+    password: ENC(pMJSSZjV6sXuiCTCbEIUFvUJv+Jp50YSzy8ycoRZ+xREYwlGj2vF3e/TYnX0lO8N01OR8/nruDNeFlF4P2z+FS6kMumoqep4J0Tf+Pd4iZ0=)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    database: postgresql
