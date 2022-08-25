@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-@Profile("prod")
+@Profile("local")
 @Configuration
 @Slf4j
 public class FirebaseConfig {
