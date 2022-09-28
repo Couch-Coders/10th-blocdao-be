@@ -49,9 +49,25 @@ public class MemberController {
         return memberService.login(member);
     }
 
+    // 회원 정보 수정
+    @PutMapping()
+    public ResponseEntity<String> updateMember(Authentication authentication) {
+
+        Member member = (Member) authentication.getPrincipal();
+        return memberService.signOut(member);
+    }
+    
+    // 회원 탈퇴
+    @DeleteMapping()
+    public ResponseEntity<String> signOut(Authentication authentication) {
+        return memberService.signOut((Member) authentication.getPrincipal());
+    }
+
     // 마이페이지 출력용 데이터를 호출하는 api
+    // 내가 작성한 모집 글 보기
     @GetMapping("/my")
     public ResponseEntity<MemberProfileResponseDto> profile(Authentication authentication) {
+        // 회원 서비스에서 맴버 객체를 새롭게 생성하여 조회 기능을 수행한다.
         return memberService.profile((Member) authentication.getPrincipal());
     }
 }

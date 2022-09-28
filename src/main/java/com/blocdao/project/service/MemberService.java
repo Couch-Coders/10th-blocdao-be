@@ -138,8 +138,10 @@ public class MemberService implements UserDetailsService {
         });
     }
 
+    // 내가 작성한 게시글 목록을 조회한다.
     public ResponseEntity<MemberProfileResponseDto> profile(Member principal) {
-        MemberProfileResponseDto memberProfileResponseDto = new MemberProfileResponseDto(principal);
+        Member member = memberRepository.findById(principal.getUid()).orElseThrow();
+        MemberProfileResponseDto memberProfileResponseDto = new MemberProfileResponseDto(member);
 
         return ResponseEntity
                 .ok(memberProfileResponseDto);
@@ -148,6 +150,15 @@ public class MemberService implements UserDetailsService {
     public ResponseEntity<String> login(Member member) {
         return ResponseEntity
                 .status(HttpStatus.OK)
+                .body(member.getNickName());
+    }
+
+    @Transactional
+    // 회원 탈퇴
+    public ResponseEntity<String> signOut(Member member) {
+        memberRepository.delete(member);
+        return ResponseEntity
+                .status(HttpStatus.GONE)
                 .body(member.getNickName());
     }
 }

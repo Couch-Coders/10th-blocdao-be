@@ -1,25 +1,29 @@
 package com.blocdao.project.dto.member.response;
 
 import com.blocdao.project.entity.Member;
+import com.blocdao.project.entity.Project;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Slf4j
 public class MemberProfileResponseDto {
     private String nickName;
     private String imageUrl;
     private String email;
     private String phone;
     private String profileLink;
-    private List<String> projectTitle = new ArrayList<>();
-    private List<String> startTime = new ArrayList<>();
-    private List<String> endTime = new ArrayList<>();
+
+    @JsonProperty("projects")
+    private List<ProjectResponseDto> projectResponseDtoList = new ArrayList<>();
 
     public MemberProfileResponseDto(Member member) {
         this.nickName = member.getNickName();
@@ -28,11 +32,26 @@ public class MemberProfileResponseDto {
         this.phone = member.getPhone();
         this.profileLink = member.getProfileLink();
 
-        member.getProjects().forEach((project -> {
-            this.projectTitle.add(project.getTitle());
-            this.startTime.add(project.getStartTime());
-            this.endTime.add(project.getEndTime());
-        }));
+        if(!member.getProjects().isEmpty()){
+            member.getProjects().forEach((project -> {
+                ProjectResponseDto projectResponseDto = new ProjectResponseDto(project);
+                projectResponseDtoList.add(projectResponseDto);
+            }));
+        }
+    }
 
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class ProjectResponseDto{
+        private String projectTitle;
+        private String startTime;
+        private String endTime;
+
+        public ProjectResponseDto(Project project){
+            this.projectTitle = project.getTitle();
+            this.startTime = project.getStartTime();
+            this.endTime = project.getEndTime();
+        }
     }
 }
