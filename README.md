@@ -127,17 +127,6 @@ BACK-END : [이용준](https://github.com/yongjunleeme) /
 
 [API 명세서](https://www.notion.so/API-f7fbe4719bc24392997726f3bca7795a)
 
-## 📂 프론트 깃 레포지터리
-
-[https://github.com/Couch-Coders/10th-blocdao-fe](https://github.com/Couch-Coders/10th-blocdao-fe)
-
-## ✔️프로젝트 이슈
-
-### 이슈 템플릿
-
-- 이슈 1
-- 이슈 2
-
 
 ## 🔖 레퍼런스
 
