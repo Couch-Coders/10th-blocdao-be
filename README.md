@@ -73,7 +73,10 @@ BACK-END : [이용준](https://github.com/yongjunleeme) /
   <img src="https://img.shields.io/badge/PostgreSQL -4479A1?style=flat-square&logo=PostgreSQL&logoColor=white"/>
   <img src="https://img.shields.io/badge/FirebaseOauth-4285F4?style=flat-square&logo=Firebase&logoColor=white"/>
 </p>
- 
+
+ ## 기본화면
+ ![image](https://github.com/Couch-Coders/10th-blocdao-be/assets/35955189/d513bb2e-5ad6-44e9-9adf-466e98976c98)
+
 
 **Infra**
 <p>
