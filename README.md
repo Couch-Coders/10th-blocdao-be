@@ -74,15 +74,12 @@ BACK-END : [이용준](https://github.com/yongjunleeme) /
   <img src="https://img.shields.io/badge/FirebaseOauth-4285F4?style=flat-square&logo=Firebase&logoColor=white"/>
 </p>
 
- ## 기본화면
- ![image](https://github.com/Couch-Coders/10th-blocdao-be/assets/35955189/d513bb2e-5ad6-44e9-9adf-466e98976c98)
-
-
 **Infra**
 <p>
  <img src="https://img.shields.io/badge/Heroku -4479A1?style=flat-square&logo=Heroku&logoColor=white"/>
 <img src="https://img.shields.io/badge/Github Actions-4285F4?style=flat-square&logo=Github Actions&logoColor=white"/>
 </p>
+
 ## ⚙ ERD 설계
 
 ![블록체인 스터디 모집 프로젝트 - blocdao](https://user-images.githubusercontent.com/35955189/190098914-ea7ba12f-d039-4d8d-8197-f5e7e1f4a1c5.png)
@@ -93,6 +90,11 @@ BACK-END : [이용준](https://github.com/yongjunleeme) /
 ![시스템 아키텍처](https://user-images.githubusercontent.com/42866800/176840686-f0665ef6-b7e9-4dac-969d-108e065b7c12.png)
 
 <br>
+
+ ## 기본화면
+ ![image](https://github.com/Couch-Coders/10th-blocdao-be/assets/35955189/d513bb2e-5ad6-44e9-9adf-466e98976c98)
+
+ <br>
 
 
 ##  api 시나리오 테스트 자동화
