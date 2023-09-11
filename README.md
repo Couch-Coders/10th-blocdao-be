@@ -34,12 +34,6 @@
 
 <br>
 
-## 🔹 기능 소개 
-
-[![For-Rest 시연영상](http://img.youtube.com/vi/n006XpYXaAM/0.jpg)](http://youtu.be/n006XpYXaAM)
-
-<br>
-
 
 ## ⏰ 프로젝트 개발 기간
 
@@ -105,15 +99,9 @@ BACK-END : [이용준](https://github.com/yongjunleeme) /
 
 <br>
 
-## 프로젝트 UML
-
-<br>
-
 ## 🛠 기획 및 설계
 
 [기능 명세서](https://curly-crayon-1da.notion.site/API-f7fbe4719bc24392997726f3bca7795a)
-
-[UI 기획서]()
 
 [Figma 디자인](https://www.figma.com/file/MvD49HcDMRc3kuGUIwezXx/projects-Blockdao?node-id=0%3A1)
 
@@ -123,7 +111,3 @@ BACK-END : [이용준](https://github.com/yongjunleeme) /
 
 [API 명세서](https://www.notion.so/API-f7fbe4719bc24392997726f3bca7795a)
 
-
-## 🔖 레퍼런스
-
-[레퍼런스 제목](https://velog.io/@conatuseus/JPA-%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C-%ED%83%80%EC%9E%85embedded-type-8ak3ygq8wo)
